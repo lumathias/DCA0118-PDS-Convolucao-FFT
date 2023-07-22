@@ -60,16 +60,16 @@ y_dft = y[:len(y_t)]
 print(y_dft)
 
 # Graphs plot
-plt.figure(figsize=(10, 6))
+plt.figure(figsize=(12, 8))
 plt.subplot(1, 1, 1)
 
-plt.plot(y_t, label='Convolução no Tempo')
-plt.plot(y, label='Convolução Circular')
-
+plt.title('Convolução Circular vs Convolução no Tempo')
 plt.ylabel('Amplitude')
 plt.xlabel('Amostras')
-plt.title('Convolução Circular vs Convolução no Tempo')
+plt.plot(y_t, label='Convolução no Tempo')
+plt.plot(y, label='Convolução Circular')
 
 plt.legend()
 plt.tight_layout()
 plt.show()
+plt.savefig("conv_plots.png")
